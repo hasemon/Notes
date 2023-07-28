@@ -4,6 +4,8 @@
 	"description": "\"\"",
 	"main": "index.js",
 	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js",
 		"build:ui": "shx rm -rf dist && cd ../frontend && npm run build && shx cp -r ../frontend/dist ../backend",
 		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
 	},
