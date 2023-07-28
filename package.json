@@ -4,7 +4,7 @@
 	"description": "\"\"",
 	"main": "index.js",
 	"scripts": {
-		"build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../../backend/Notes/Notes",
+		"build:ui": "shx rm -rf dist && cd ../frontend && npm run build && shx cp -r ../frontend/dist ../backend",
 		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
 	},
 	"repository": {
@@ -21,6 +21,7 @@
 		"express": "^4.18.2"
 	},
 	"devDependencies": {
-		"nodemon": "^3.0.1"
+		"nodemon": "^3.0.1",
+		"shx": "^0.3.4"
 	}
 }
