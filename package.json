@@ -7,7 +7,8 @@
 		"start": "node index.js",
 		"dev": "nodemon index.js",
 		"build:ui": "shx rm -rf dist && cd ../frontend && npm run build && shx cp -r ../frontend/dist ../backend",
-		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+		"lint": "eslint ."
 	},
 	"repository": {
 		"type": "git",
@@ -25,6 +26,7 @@
 		"mongoose": "^7.4.1"
 	},
 	"devDependencies": {
+		"eslint": "^8.46.0",
 		"nodemon": "^3.0.1",
 		"shx": "^0.3.4"
 	}
